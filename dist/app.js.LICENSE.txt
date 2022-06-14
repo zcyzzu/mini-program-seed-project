@@ -1,0 +1,43 @@
+/*! ../node_modules/babel-loader/lib!./app.tsx */
+
+/*! ./app.less */
+
+/*! ./common/interceptor */
+
+/*! @tarojs/plugin-framework-react/dist/runtime */
+
+/*! @tarojs/plugin-platform-weapp/dist/runtime */
+
+/*! @tarojs/runtime */
+
+/*! @tarojs/taro */
+
+/*! all exports used */
+
+/*! exports provided: default */
+
+/*! exports used: default */
+
+/*! no exports provided */
+
+/*! no static exports found */
+
+/*! react */
+
+/*! react-dom */
+
+/*!*********************!*\
+  !*** ./src/app.tsx ***!
+  \*********************/
+
+/*!**********************!*\
+  !*** ./src/app.less ***!
+  \**********************/
+
+/*!***********************************!*\
+  !*** ./src/common/interceptor.ts ***!
+  \***********************************/
+
+/*!*****************************************************!*\
+  !*** ./node_modules/babel-loader/lib!./src/app.tsx ***!
+  \*****************************************************/

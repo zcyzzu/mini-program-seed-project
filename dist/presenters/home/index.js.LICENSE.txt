@@ -1,0 +1,25 @@
+/*! ../../../node_modules/babel-loader/lib!./index.tsx */
+
+/*! @tarojs/components */
+
+/*! @tarojs/runtime */
+
+/*! @tarojs/taro */
+
+/*! all exports used */
+
+/*! exports provided: default */
+
+/*! exports used: default */
+
+/*! no exports provided */
+
+/*! react/jsx-runtime */
+
+/*!***************************************!*\
+  !*** ./src/presenters/home/index.tsx ***!
+  \***************************************/
+
+/*!***********************************************************************!*\
+  !*** ./node_modules/babel-loader/lib!./src/presenters/home/index.tsx ***!
+  \***********************************************************************/

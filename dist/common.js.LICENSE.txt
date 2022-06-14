@@ -1,0 +1,87 @@
+/*! ../../constants/identifiers */
+
+/*! ../constants/identifiers */
+
+/*! ./common/appConfig */
+
+/*! ./common/appContext */
+
+/*! ./constants/identifiers */
+
+/*! ./data/simpleRequestRepositoryImpl */
+
+/*! ./domain/useCases/simpleRequsetUseCase */
+
+/*! ./node_modules/@babel/runtime/helpers/esm/applyDecoratedDescriptor.js */
+
+/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */
+
+/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js */
+
+/*! ./node_modules/@babel/runtime/helpers/esm/createClass.js */
+
+/*! ./node_modules/@babel/runtime/helpers/esm/defineProperty.js */
+
+/*! ./node_modules/@babel/runtime/helpers/esm/initializerDefineProperty.js */
+
+/*! ./node_modules/@babel/runtime/helpers/esm/initializerWarningHelper.js */
+
+/*! ./node_modules/@babel/runtime/regenerator/index.js */
+
+/*! ./presenters/counter/viewModel */
+
+/*! ./presenters/simpleRequest/viewModel */
+
+/*! @tarojs/taro */
+
+/*! exports provided: DIContainer, lazyInject */
+
+/*! exports provided: HELPER_IDENTIFIER, COUNTER_IDENTIFIER, SIMPLE_REQUEST_IDENTIFIER */
+
+/*! exports provided: default */
+
+/*! exports used: COUNTER_IDENTIFIER, HELPER_IDENTIFIER, SIMPLE_REQUEST_IDENTIFIER */
+
+/*! exports used: DIContainer */
+
+/*! exports used: default */
+
+/*! inversify */
+
+/*! inversify-inject-decorators */
+
+/*! mobx */
+
+/*! reflect-metadata */
+
+/*!*********************************!*\
+  !*** ./src/common/appConfig.ts ***!
+  \*********************************/
+
+/*!*********************************!*\
+  !*** ./src/inversify.config.ts ***!
+  \*********************************/
+
+/*!**********************************!*\
+  !*** ./src/common/appContext.ts ***!
+  \**********************************/
+
+/*!**************************************!*\
+  !*** ./src/constants/identifiers.ts ***!
+  \**************************************/
+
+/*!*********************************************!*\
+  !*** ./src/presenters/counter/viewModel.ts ***!
+  \*********************************************/
+
+/*!*************************************************!*\
+  !*** ./src/data/simpleRequestRepositoryImpl.ts ***!
+  \*************************************************/
+
+/*!***************************************************!*\
+  !*** ./src/presenters/simpleRequest/viewModel.ts ***!
+  \***************************************************/
+
+/*!*****************************************************!*\
+  !*** ./src/domain/useCases/simpleRequsetUseCase.ts ***!
+  \*****************************************************/

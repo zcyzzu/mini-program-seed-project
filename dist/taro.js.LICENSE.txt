@@ -1,0 +1,556 @@
+/*! *****************************************************************************
+Copyright (c) Microsoft Corporation. All rights reserved.
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use
+this file except in compliance with the License. You may obtain a copy of the
+License at http://www.apache.org/licenses/LICENSE-2.0
+
+THIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED
+WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,
+MERCHANTABLITY OR NON-INFRINGEMENT.
+
+See the Apache Version 2.0 License for specific language governing permissions
+and limitations under the License.
+***************************************************************************** */
+
+/*! ../annotation/inject */
+
+/*! ../bindings/binding */
+
+/*! ../bindings/binding_count */
+
+/*! ../constants/error_msgs */
+
+/*! ../constants/literal_types */
+
+/*! ../constants/metadata_keys */
+
+/*! ../planning/metadata */
+
+/*! ../planning/metadata_reader */
+
+/*! ../planning/planner */
+
+/*! ../resolution/resolver */
+
+/*! ../syntax/binding_to_syntax */
+
+/*! ../utils/exceptions */
+
+/*! ../utils/id */
+
+/*! ../utils/serialization */
+
+/*! ./../../../webpack/buildin/global.js */
+
+/*! ./annotation/decorator_utils */
+
+/*! ./annotation/inject */
+
+/*! ./annotation/injectable */
+
+/*! ./annotation/multi_inject */
+
+/*! ./annotation/named */
+
+/*! ./annotation/optional */
+
+/*! ./annotation/post_construct */
+
+/*! ./annotation/tagged */
+
+/*! ./annotation/target_name */
+
+/*! ./annotation/unmanaged */
+
+/*! ./binding_in_syntax */
+
+/*! ./binding_in_when_on_syntax */
+
+/*! ./binding_on_syntax */
+
+/*! ./binding_when_on_syntax */
+
+/*! ./binding_when_syntax */
+
+/*! ./constants/literal_types */
+
+/*! ./constants/metadata_keys */
+
+/*! ./constraint_helpers */
+
+/*! ./container/container */
+
+/*! ./container/container_module */
+
+/*! ./container_snapshot */
+
+/*! ./context */
+
+/*! ./decorator_utils */
+
+/*! ./instantiation */
+
+/*! ./lookup */
+
+/*! ./metadata */
+
+/*! ./node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js */
+
+/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js */
+
+/*! ./node_modules/@babel/runtime/helpers/esm/createClass.js */
+
+/*! ./node_modules/@babel/runtime/helpers/esm/createSuper.js */
+
+/*! ./node_modules/@babel/runtime/helpers/esm/defineProperty.js */
+
+/*! ./node_modules/@babel/runtime/helpers/esm/get.js */
+
+/*! ./node_modules/@babel/runtime/helpers/esm/getPrototypeOf.js */
+
+/*! ./node_modules/@babel/runtime/helpers/esm/inherits.js */
+
+/*! ./node_modules/@babel/runtime/helpers/esm/set.js */
+
+/*! ./node_modules/@babel/runtime/helpers/esm/slicedToArray.js */
+
+/*! ./node_modules/@babel/runtime/helpers/esm/toArray.js */
+
+/*! ./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js */
+
+/*! ./node_modules/@babel/runtime/helpers/esm/typeof.js */
+
+/*! ./node_modules/@babel/runtime/helpers/esm/wrapNativeSuper.js */
+
+/*! ./plan */
+
+/*! ./planning/metadata_reader */
+
+/*! ./queryable_string */
+
+/*! ./reflection_utils */
+
+/*! ./request */
+
+/*! ./syntax/constraint_helpers */
+
+/*! ./target */
+
+/*! ./utils/binding_utils */
+
+/*! ./utils/id */
+
+/*! ./utils/serialization */
+
+/*! @babel/runtime/helpers/classCallCheck */
+
+/*! @babel/runtime/helpers/createClass */
+
+/*! @babel/runtime/helpers/defineProperty */
+
+/*! @babel/runtime/helpers/objectSpread2 */
+
+/*! @babel/runtime/helpers/typeof */
+
+/*! @tarojs/api */
+
+/*! @tarojs/runtime */
+
+/*! @tarojs/shared */
+
+/*! all exports used */
+
+/*! exports provided: Ad, AdCustom, Audio, Block, Button, Camera, Canvas, Checkbox, CheckboxGroup, CoverImage, CoverView, CustomWrapper, Editor, Form, FunctionalPageNavigator, Icon, Image, Input, KeyboardAccessory, Label, LivePlayer, LivePusher, Map, MatchMedia, MovableArea, MovableView, NavigationBar, Navigator, OfficialAccount, OpenData, PageContainer, PageMeta, Picker, PickerView, PickerViewColumn, Progress, Radio, RadioGroup, RichText, ScrollView, ShareElement, Slider, Slot, Swiper, SwiperItem, Switch, Text, Textarea, Video, View, VoipRoom, WebView */
+
+/*! exports provided: Binding */
+
+/*! exports provided: BindingCount */
+
+/*! exports provided: BindingInSyntax */
+
+/*! exports provided: BindingInWhenOnSyntax */
+
+/*! exports provided: BindingOnSyntax */
+
+/*! exports provided: BindingScopeEnum, BindingTypeEnum, TargetTypeEnum */
+
+/*! exports provided: BindingToSyntax */
+
+/*! exports provided: BindingWhenOnSyntax */
+
+/*! exports provided: BindingWhenSyntax */
+
+/*! exports provided: Container */
+
+/*! exports provided: ContainerModule, AsyncContainerModule */
+
+/*! exports provided: ContainerSnapshot */
+
+/*! exports provided: Context */
+
+/*! exports provided: Current, ElementNames, Events, FormElement, MutationObserver, SERVICE_IDENTIFIER, SVGElement, Style, TaroElement, TaroEvent, TaroNode, TaroRootElement, TaroText, addLeadingSlash, cancelAnimationFrame, container, createComponentConfig, createDocument, createEvent, createPageConfig, createRecursiveComponentConfig, document, eventCenter, eventHandler, eventSource, getComputedStyle, getCurrentInstance, getPageInstance, hydrate, incrementId, injectPageInstance, navigator, nextTick, now, options, processPluginHooks, requestAnimationFrame, safeExecute, stringify, window */
+
+/*! exports provided: DUPLICATED_INJECTABLE_DECORATOR, DUPLICATED_METADATA, NULL_ARGUMENT, KEY_NOT_FOUND, AMBIGUOUS_MATCH, CANNOT_UNBIND, NOT_REGISTERED, MISSING_INJECTABLE_ANNOTATION, MISSING_INJECT_ANNOTATION, UNDEFINED_INJECT_ANNOTATION, CIRCULAR_DEPENDENCY, NOT_IMPLEMENTED, INVALID_BINDING_TYPE, NO_MORE_SNAPSHOTS_AVAILABLE, INVALID_MIDDLEWARE_RETURN, INVALID_FUNCTION_BINDING, INVALID_TO_SELF_VALUE, INVALID_DECORATOR_OPERATION, ARGUMENTS_LENGTH_MISMATCH, CONTAINER_OPTIONS_MUST_BE_AN_OBJECT, CONTAINER_OPTIONS_INVALID_DEFAULT_SCOPE, CONTAINER_OPTIONS_INVALID_AUTO_BIND_INJECTABLE, CONTAINER_OPTIONS_INVALID_SKIP_BASE_CHECK, MULTIPLE_POST_CONSTRUCT_METHODS, POST_CONSTRUCT_ERROR, CIRCULAR_DEPENDENCY_IN_FACTORY, STACK_OVERFLOW */
+
+/*! exports provided: EMPTY_ARR, EMPTY_OBJ, animation, box, cacheDataGet, cacheDataHas, cacheDataSet, capitalize, controlledComponent, defaultReconciler, ensure, focusComponents, getUniqueKey, hasOwn, indent, internalComponents, isArray, isBoolean, isBooleanStringLiteral, isFunction, isNull, isNumber, isObject, isString, isUndefined, mergeInternalComponents, mergeReconciler, nestElements, noop, processApis, queryToJson, setUniqueKeyToRoute, singleQuote, toCamelCase, toDashed, toKebabCase, touchEvents, unbox, unsupport, voidElements, warn */
+
+/*! exports provided: LazyServiceIdentifer, inject */
+
+/*! exports provided: Lookup */
+
+/*! exports provided: METADATA_KEY, Container, BindingScopeEnum, BindingTypeEnum, TargetTypeEnum, AsyncContainerModule, ContainerModule, injectable, tagged, named, inject, LazyServiceIdentifer, optional, unmanaged, multiInject, targetName, postConstruct, MetadataReader, id, decorate, traverseAncerstors, taggedConstraint, namedConstraint, typeConstraint, getServiceIdentifierAsString, multiBindToService */
+
+/*! exports provided: Metadata */
+
+/*! exports provided: MetadataReader */
+
+/*! exports provided: NAMED_TAG, NAME_TAG, UNMANAGED_TAG, OPTIONAL_TAG, INJECT_TAG, MULTI_INJECT_TAG, TAGGED, TAGGED_PROP, PARAM_TYPES, DESIGN_PARAM_TYPES, POST_CONSTRUCT, NON_CUSTOM_TAG_KEYS */
+
+/*! exports provided: Plan */
+
+/*! exports provided: QueryableString */
+
+/*! exports provided: Request */
+
+/*! exports provided: Target */
+
+/*! exports provided: connectReactPage, createNativeComponentConfig, createReactApp, setReconciler, useAddToFavorites, useDidHide, useDidShow, useOptionMenuClick, usePageScroll, usePullDownRefresh, usePullIntercept, useReachBottom, useReady, useResize, useRouter, useScope, useShareAppMessage, useShareTimeline, useTabItemTap, useTitleClick */
+
+/*! exports provided: createPortal, default, findDOMNode, render, unmountComponentAtNode, unstable_batchedUpdates */
+
+/*! exports provided: decorate, tagParameter, tagProperty */
+
+/*! exports provided: default */
+
+/*! exports provided: getDependencies, getBaseClassDependencyCount, getFunctionName */
+
+/*! exports provided: getFunctionName, getServiceIdentifierAsString, listRegisteredBindingsForServiceIdentifier, listMetadataForTarget, circularDependencyToException */
+
+/*! exports provided: id */
+
+/*! exports provided: injectable */
+
+/*! exports provided: isStackOverflowExeption */
+
+/*! exports provided: multiBindToService */
+
+/*! exports provided: multiInject */
+
+/*! exports provided: named */
+
+/*! exports provided: optional */
+
+/*! exports provided: plan, createMockRequest, getBindingDictionary */
+
+/*! exports provided: postConstruct */
+
+/*! exports provided: resolve */
+
+/*! exports provided: resolveInstance */
+
+/*! exports provided: tagged */
+
+/*! exports provided: targetName */
+
+/*! exports provided: traverseAncerstors, taggedConstraint, namedConstraint, typeConstraint */
+
+/*! exports provided: unmanaged */
+
+/*! exports used: AMBIGUOUS_MATCH, ARGUMENTS_LENGTH_MISMATCH, CANNOT_UNBIND, CIRCULAR_DEPENDENCY, CIRCULAR_DEPENDENCY_IN_FACTORY, CONTAINER_OPTIONS_INVALID_AUTO_BIND_INJECTABLE, CONTAINER_OPTIONS_INVALID_DEFAULT_SCOPE, CONTAINER_OPTIONS_INVALID_SKIP_BASE_CHECK, CONTAINER_OPTIONS_MUST_BE_AN_OBJECT, DUPLICATED_INJECTABLE_DECORATOR, DUPLICATED_METADATA, INVALID_BINDING_TYPE, INVALID_DECORATOR_OPERATION, INVALID_FUNCTION_BINDING, INVALID_MIDDLEWARE_RETURN, INVALID_TO_SELF_VALUE, KEY_NOT_FOUND, MISSING_INJECTABLE_ANNOTATION, MISSING_INJECT_ANNOTATION, MULTIPLE_POST_CONSTRUCT_METHODS, NOT_REGISTERED, NO_MORE_SNAPSHOTS_AVAILABLE, NULL_ARGUMENT, POST_CONSTRUCT_ERROR, STACK_OVERFLOW, UNDEFINED_INJECT_ANNOTATION */
+
+/*! exports used: Binding */
+
+/*! exports used: BindingCount */
+
+/*! exports used: BindingInSyntax */
+
+/*! exports used: BindingInWhenOnSyntax */
+
+/*! exports used: BindingOnSyntax */
+
+/*! exports used: BindingScopeEnum, BindingTypeEnum, TargetTypeEnum */
+
+/*! exports used: BindingToSyntax */
+
+/*! exports used: BindingWhenOnSyntax */
+
+/*! exports used: BindingWhenSyntax */
+
+/*! exports used: Button, Form, ScrollView, Text, View */
+
+/*! exports used: Container */
+
+/*! exports used: Container, ContainerModule, inject, injectable, multiInject, optional */
+
+/*! exports used: ContainerModule */
+
+/*! exports used: ContainerSnapshot */
+
+/*! exports used: Context */
+
+/*! exports used: EMPTY_ARR, EMPTY_OBJ, capitalize, controlledComponent, defaultReconciler, ensure, internalComponents, isArray, isBoolean, isFunction, isNumber, isObject, isString, isUndefined, mergeInternalComponents, mergeReconciler, noop, processApis, toCamelCase, toDashed, warn */
+
+/*! exports used: LazyServiceIdentifer, inject */
+
+/*! exports used: Lookup */
+
+/*! exports used: Metadata */
+
+/*! exports used: MetadataReader */
+
+/*! exports used: Plan */
+
+/*! exports used: QueryableString */
+
+/*! exports used: Request */
+
+/*! exports used: Target */
+
+/*! exports used: circularDependencyToException, getFunctionName, getServiceIdentifierAsString, listMetadataForTarget, listRegisteredBindingsForServiceIdentifier */
+
+/*! exports used: createMockRequest, getBindingDictionary, plan */
+
+/*! exports used: createReactApp */
+
+/*! exports used: default, initPxTransform */
+
+/*! exports used: default, unstable_batchedUpdates */
+
+/*! exports used: getBaseClassDependencyCount, getDependencies, getFunctionName */
+
+/*! exports used: id */
+
+/*! exports used: injectable */
+
+/*! exports used: isStackOverflowExeption */
+
+/*! exports used: multiInject */
+
+/*! exports used: namedConstraint, taggedConstraint, traverseAncerstors, typeConstraint */
+
+/*! exports used: optional */
+
+/*! exports used: resolve */
+
+/*! exports used: resolveInstance */
+
+/*! exports used: tagParameter, tagProperty */
+
+/*! inversify */
+
+/*! no exports provided */
+
+/*! no static exports found */
+
+/*! react-reconciler */
+
+/*! scheduler */
+
+/*!********************************************!*\
+  !*** ./node_modules/@tarojs/taro/index.js ***!
+  \********************************************/
+
+/*!****************************************************!*\
+  !*** ./node_modules/@tarojs/api/dist/index.esm.js ***!
+  \****************************************************/
+
+/*!******************************************************!*\
+  !*** ./node_modules/@tarojs/react/dist/react.esm.js ***!
+  \******************************************************/
+
+/*!********************************************************!*\
+  !*** ./node_modules/@tarojs/shared/dist/shared.esm.js ***!
+  \********************************************************/
+
+/*!**********************************************************!*\
+  !*** ./node_modules/@tarojs/runtime/dist/runtime.esm.js ***!
+  \**********************************************************/
+
+/*!****************************************************************!*\
+  !*** ./node_modules/@tarojs/mini-runner/dist/template/comp.js ***!
+  \****************************************************************/
+
+/*!********************************************************************!*\
+  !*** ./node_modules/@tarojs/plugin-platform-weapp/dist/runtime.js ***!
+  \********************************************************************/
+
+/*!*********************************************************************!*\
+  !*** ./node_modules/@tarojs/plugin-framework-react/dist/runtime.js ***!
+  \*********************************************************************/
+
+/*!**************************************************************************!*\
+  !*** ./node_modules/@tarojs/mini-runner/dist/template/custom-wrapper.js ***!
+  \**************************************************************************/
+
+/*!****************************************************************************!*\
+  !*** ./node_modules/@tarojs/runtime/node_modules/inversify/es/utils/id.js ***!
+  \****************************************************************************/
+
+/*!*****************************************************************************!*\
+  !*** ./node_modules/@tarojs/plugin-platform-weapp/dist/components-react.js ***!
+  \*****************************************************************************/
+
+/*!*****************************************************************************!*\
+  !*** ./node_modules/@tarojs/runtime/node_modules/inversify/es/inversify.js ***!
+  \*****************************************************************************/
+
+/*!*********************************************************************************!*\
+  !*** ./node_modules/@tarojs/runtime/node_modules/inversify/es/planning/plan.js ***!
+  \*********************************************************************************/
+
+/*!***********************************************************************************!*\
+  !*** ./node_modules/@tarojs/runtime/node_modules/inversify/es/planning/target.js ***!
+  \***********************************************************************************/
+
+/*!************************************************************************************!*\
+  !*** ./node_modules/@tarojs/runtime/node_modules/inversify/es/annotation/named.js ***!
+  \************************************************************************************/
+
+/*!************************************************************************************!*\
+  !*** ./node_modules/@tarojs/runtime/node_modules/inversify/es/bindings/binding.js ***!
+  \************************************************************************************/
+
+/*!************************************************************************************!*\
+  !*** ./node_modules/@tarojs/runtime/node_modules/inversify/es/container/lookup.js ***!
+  \************************************************************************************/
+
+/*!************************************************************************************!*\
+  !*** ./node_modules/@tarojs/runtime/node_modules/inversify/es/planning/context.js ***!
+  \************************************************************************************/
+
+/*!************************************************************************************!*\
+  !*** ./node_modules/@tarojs/runtime/node_modules/inversify/es/planning/planner.js ***!
+  \************************************************************************************/
+
+/*!************************************************************************************!*\
+  !*** ./node_modules/@tarojs/runtime/node_modules/inversify/es/planning/request.js ***!
+  \************************************************************************************/
+
+/*!************************************************************************************!*\
+  !*** ./node_modules/@tarojs/runtime/node_modules/inversify/es/utils/exceptions.js ***!
+  \************************************************************************************/
+
+/*!*************************************************************************************!*\
+  !*** ./node_modules/@tarojs/runtime/node_modules/inversify/es/annotation/inject.js ***!
+  \*************************************************************************************/
+
+/*!*************************************************************************************!*\
+  !*** ./node_modules/@tarojs/runtime/node_modules/inversify/es/annotation/tagged.js ***!
+  \*************************************************************************************/
+
+/*!*************************************************************************************!*\
+  !*** ./node_modules/@tarojs/runtime/node_modules/inversify/es/planning/metadata.js ***!
+  \*************************************************************************************/
+
+/*!***************************************************************************************!*\
+  !*** ./node_modules/@tarojs/runtime/node_modules/inversify/es/annotation/optional.js ***!
+  \***************************************************************************************/
+
+/*!***************************************************************************************!*\
+  !*** ./node_modules/@tarojs/runtime/node_modules/inversify/es/container/container.js ***!
+  \***************************************************************************************/
+
+/*!***************************************************************************************!*\
+  !*** ./node_modules/@tarojs/runtime/node_modules/inversify/es/resolution/resolver.js ***!
+  \***************************************************************************************/
+
+/*!***************************************************************************************!*\
+  !*** ./node_modules/@tarojs/runtime/node_modules/inversify/es/utils/binding_utils.js ***!
+  \***************************************************************************************/
+
+/*!***************************************************************************************!*\
+  !*** ./node_modules/@tarojs/runtime/node_modules/inversify/es/utils/serialization.js ***!
+  \***************************************************************************************/
+
+/*!****************************************************************************************!*\
+  !*** ./node_modules/@tarojs/runtime/node_modules/inversify/es/annotation/unmanaged.js ***!
+  \****************************************************************************************/
+
+/*!****************************************************************************************!*\
+  !*** ./node_modules/@tarojs/runtime/node_modules/inversify/es/constants/error_msgs.js ***!
+  \****************************************************************************************/
+
+/*!*****************************************************************************************!*\
+  !*** ./node_modules/@tarojs/runtime/node_modules/inversify/es/annotation/injectable.js ***!
+  \*****************************************************************************************/
+
+/*!******************************************************************************************!*\
+  !*** ./node_modules/@tarojs/runtime/node_modules/inversify/es/annotation/target_name.js ***!
+  \******************************************************************************************/
+
+/*!******************************************************************************************!*\
+  !*** ./node_modules/@tarojs/runtime/node_modules/inversify/es/bindings/binding_count.js ***!
+  \******************************************************************************************/
+
+/*!*******************************************************************************************!*\
+  !*** ./node_modules/@tarojs/runtime/node_modules/inversify/es/annotation/multi_inject.js ***!
+  \*******************************************************************************************/
+
+/*!*******************************************************************************************!*\
+  !*** ./node_modules/@tarojs/runtime/node_modules/inversify/es/constants/literal_types.js ***!
+  \*******************************************************************************************/
+
+/*!*******************************************************************************************!*\
+  !*** ./node_modules/@tarojs/runtime/node_modules/inversify/es/constants/metadata_keys.js ***!
+  \*******************************************************************************************/
+
+/*!********************************************************************************************!*\
+  !*** ./node_modules/@tarojs/runtime/node_modules/inversify/es/planning/metadata_reader.js ***!
+  \********************************************************************************************/
+
+/*!********************************************************************************************!*\
+  !*** ./node_modules/@tarojs/runtime/node_modules/inversify/es/resolution/instantiation.js ***!
+  \********************************************************************************************/
+
+/*!********************************************************************************************!*\
+  !*** ./node_modules/@tarojs/runtime/node_modules/inversify/es/syntax/binding_in_syntax.js ***!
+  \********************************************************************************************/
+
+/*!********************************************************************************************!*\
+  !*** ./node_modules/@tarojs/runtime/node_modules/inversify/es/syntax/binding_on_syntax.js ***!
+  \********************************************************************************************/
+
+/*!********************************************************************************************!*\
+  !*** ./node_modules/@tarojs/runtime/node_modules/inversify/es/syntax/binding_to_syntax.js ***!
+  \********************************************************************************************/
+
+/*!*********************************************************************************************!*\
+  !*** ./node_modules/@tarojs/runtime/node_modules/inversify/es/annotation/post_construct.js ***!
+  \*********************************************************************************************/
+
+/*!*********************************************************************************************!*\
+  !*** ./node_modules/@tarojs/runtime/node_modules/inversify/es/planning/queryable_string.js ***!
+  \*********************************************************************************************/
+
+/*!*********************************************************************************************!*\
+  !*** ./node_modules/@tarojs/runtime/node_modules/inversify/es/planning/reflection_utils.js ***!
+  \*********************************************************************************************/
+
+/*!*********************************************************************************************!*\
+  !*** ./node_modules/@tarojs/runtime/node_modules/inversify/es/syntax/constraint_helpers.js ***!
+  \*********************************************************************************************/
+
+/*!**********************************************************************************************!*\
+  !*** ./node_modules/@tarojs/runtime/node_modules/inversify/es/annotation/decorator_utils.js ***!
+  \**********************************************************************************************/
+
+/*!**********************************************************************************************!*\
+  !*** ./node_modules/@tarojs/runtime/node_modules/inversify/es/container/container_module.js ***!
+  \**********************************************************************************************/
+
+/*!**********************************************************************************************!*\
+  !*** ./node_modules/@tarojs/runtime/node_modules/inversify/es/syntax/binding_when_syntax.js ***!
+  \**********************************************************************************************/
+
+/*!************************************************************************************************!*\
+  !*** ./node_modules/@tarojs/runtime/node_modules/inversify/es/container/container_snapshot.js ***!
+  \************************************************************************************************/
+
+/*!*************************************************************************************************!*\
+  !*** ./node_modules/@tarojs/runtime/node_modules/inversify/es/syntax/binding_when_on_syntax.js ***!
+  \*************************************************************************************************/
+
+/*!****************************************************************************************************!*\
+  !*** ./node_modules/@tarojs/runtime/node_modules/inversify/es/syntax/binding_in_when_on_syntax.js ***!
+  \****************************************************************************************************/

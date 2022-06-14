@@ -1,0 +1,152 @@
+/*!
+  Copyright (c) 2018 Jed Watson.
+  Licensed under the MIT License (MIT), see
+  http://jedwatson.github.io/classnames
+*/
+
+/*! ../../../node_modules/babel-loader/lib!./index.tsx */
+
+/*! ../../common/utils */
+
+/*! ../../constants/identifiers */
+
+/*! ../../inversify.config */
+
+/*! ../loading/index */
+
+/*! ./checkPropTypes */
+
+/*! ./cjs/react-is.development.js */
+
+/*! ./factoryWithTypeCheckers */
+
+/*! ./lib/ReactPropTypesSecret */
+
+/*! ./lib/has */
+
+/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js */
+
+/*! ./node_modules/@babel/runtime/helpers/esm/createClass.js */
+
+/*! ./node_modules/@babel/runtime/helpers/esm/createSuper.js */
+
+/*! ./node_modules/@babel/runtime/helpers/esm/defineProperty.js */
+
+/*! ./node_modules/@babel/runtime/helpers/esm/inherits.js */
+
+/*! ./node_modules/@babel/runtime/helpers/esm/typeof.js */
+
+/*! ./style.less */
+
+/*! ./taroUIComponents.scss */
+
+/*! @tarojs/components */
+
+/*! @tarojs/runtime */
+
+/*! @tarojs/taro */
+
+/*! all exports used */
+
+/*! classnames */
+
+/*! exports provided: default */
+
+/*! exports provided: delay, delayQuerySelector, uuid, getEventDetail, initTestEnv, isTest, pxTransform, handleTouchScroll, delayGetClientRect, delayGetScrollOffset, mergeStyle */
+
+/*! exports used: default */
+
+/*! exports used: pxTransform */
+
+/*! mobx-react */
+
+/*! no exports provided */
+
+/*! no static exports found */
+
+/*! object-assign */
+
+/*! prop-types */
+
+/*! react */
+
+/*! react-is */
+
+/*! react/jsx-runtime */
+
+/*! taro-ui/dist/style/components/button.scss */
+
+/*! taro-ui/lib/components/button */
+
+/*!****************************************!*\
+  !*** ./node_modules/react-is/index.js ***!
+  \****************************************/
+
+/*!******************************************!*\
+  !*** ./node_modules/classnames/index.js ***!
+  \******************************************/
+
+/*!******************************************!*\
+  !*** ./node_modules/prop-types/index.js ***!
+  \******************************************/
+
+/*!********************************************!*\
+  !*** ./node_modules/prop-types/lib/has.js ***!
+  \********************************************/
+
+/*!************************************************!*\
+  !*** ./src/presenters/simpleRequest/index.tsx ***!
+  \************************************************/
+
+/*!*************************************************!*\
+  !*** ./src/presenters/simpleRequest/style.less ***!
+  \*************************************************/
+
+/*!**************************************************!*\
+  !*** ./node_modules/taro-ui/lib/common/utils.js ***!
+  \**************************************************/
+
+/*!***************************************************!*\
+  !*** ./node_modules/prop-types/checkPropTypes.js ***!
+  \***************************************************/
+
+/*!***********************************************************!*\
+  !*** ./node_modules/react-is/cjs/react-is.development.js ***!
+  \***********************************************************/
+
+/*!************************************************************!*\
+  !*** ./node_modules/prop-types/factoryWithTypeCheckers.js ***!
+  \************************************************************/
+
+/*!************************************************************!*\
+  !*** ./src/presenters/simpleRequest/taroUIComponents.scss ***!
+  \************************************************************/
+
+/*!*************************************************************!*\
+  !*** ./node_modules/prop-types/lib/ReactPropTypesSecret.js ***!
+  \*************************************************************/
+
+/*!*************************************************************!*\
+  !*** ./node_modules/taro-ui/lib/components/button/index.js ***!
+  \*************************************************************/
+
+/*!**************************************************************!*\
+  !*** ./node_modules/taro-ui/lib/components/loading/index.js ***!
+  \**************************************************************/
+
+/*!****************************************************************!*\
+  !*** ./node_modules/taro-ui/dist/style/components/button.scss ***!
+  \****************************************************************/
+
+/*!********************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib!./src/presenters/simpleRequest/index.tsx ***!
+  \********************************************************************************/
+
+/** @license React v16.13.1
+ * react-is.development.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */

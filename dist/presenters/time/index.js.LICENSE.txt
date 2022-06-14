@@ -1,0 +1,51 @@
+/*! ../../../node_modules/babel-loader/lib!./index.tsx */
+
+/*! ../../common/components/clock/clock */
+
+/*! ./node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js */
+
+/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js */
+
+/*! ./node_modules/@babel/runtime/helpers/esm/createClass.js */
+
+/*! ./node_modules/@babel/runtime/helpers/esm/createSuper.js */
+
+/*! ./node_modules/@babel/runtime/helpers/esm/defineProperty.js */
+
+/*! ./node_modules/@babel/runtime/helpers/esm/inherits.js */
+
+/*! ./style.less */
+
+/*! @tarojs/components */
+
+/*! @tarojs/runtime */
+
+/*! all exports used */
+
+/*! exports provided: default */
+
+/*! exports used: default */
+
+/*! no exports provided */
+
+/*! no static exports found */
+
+/*! react */
+
+/*! react/jsx-runtime */
+
+/*!***************************************!*\
+  !*** ./src/presenters/time/index.tsx ***!
+  \***************************************/
+
+/*!****************************************!*\
+  !*** ./src/presenters/time/style.less ***!
+  \****************************************/
+
+/*!***********************************************!*\
+  !*** ./src/common/components/clock/clock.tsx ***!
+  \***********************************************/
+
+/*!***********************************************************************!*\
+  !*** ./node_modules/babel-loader/lib!./src/presenters/time/index.tsx ***!
+  \***********************************************************************/
